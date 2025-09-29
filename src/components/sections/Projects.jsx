@@ -173,68 +173,6 @@ const Projects = () => {
       status: "Completed",
       color: "accent-purple"
     },
-    {
-      id: 5,
-      title: "AI Game Generator",
-      category: "AI/ML • Game Development",
-      description: "An intelligent game creation platform that uses AI to generate game mechanics, art assets, and storylines.",
-      fullDescription: "A revolutionary platform that democratizes game development by leveraging artificial intelligence. Users can describe their game ideas in natural language, and the AI generates complete game prototypes including mechanics, visual assets, and narrative elements. Built with a microservices architecture for scalability and real-time collaboration features.",
-      images: [
-        "/projects/ai-game-generator.png",
-        "/projects/ai-game-generator-2.png",
-        "/projects/ai-game-generator-3.png"
-      ],
-      technologies: [
-        { name: "Flutter", icon: <SiFlutter size={20} />, color: "text-blue-400" },
-        { name: "TensorFlow", icon: <SiTensorflow size={20} />, color: "text-orange-400" },
-        { name: "Unity", icon: <SiUnity size={20} />, color: "text-gray-400" },
-        { name: "Firebase", icon: <SiFirebase size={20} />, color: "text-yellow-400" }
-      ],
-      features: [
-        "AI-powered game mechanics generation",
-        "Procedural art asset creation",
-        "Real-time multiplayer collaboration",
-        "Cross-platform deployment",
-        "Social sharing and community features"
-      ],
-      links: {
-        demo: "https://demo.variantbeta.ai/signin",
-        github: "https://github.com/andrew/ai-game-generator"
-      },
-      status: "In Development",
-      color: "accent-purple"
-    },
-    {
-      id: 6,
-      title: "AI Game Generator",
-      category: "AI/ML • Game Development",
-      description: "An intelligent game creation platform that uses AI to generate game mechanics, art assets, and storylines.",
-      fullDescription: "A revolutionary platform that democratizes game development by leveraging artificial intelligence. Users can describe their game ideas in natural language, and the AI generates complete game prototypes including mechanics, visual assets, and narrative elements. Built with a microservices architecture for scalability and real-time collaboration features.",
-      images: [
-        "/projects/ai-game-generator.png",
-        "/projects/ai-game-generator-2.png",
-        "/projects/ai-game-generator-3.png"
-      ],
-      technologies: [
-        { name: "Flutter", icon: <SiFlutter size={20} />, color: "text-blue-400" },
-        { name: "TensorFlow", icon: <SiTensorflow size={20} />, color: "text-orange-400" },
-        { name: "Unity", icon: <SiUnity size={20} />, color: "text-gray-400" },
-        { name: "Firebase", icon: <SiFirebase size={20} />, color: "text-yellow-400" }
-      ],
-      features: [
-        "AI-powered game mechanics generation",
-        "Procedural art asset creation",
-        "Real-time multiplayer collaboration",
-        "Cross-platform deployment",
-        "Social sharing and community features"
-      ],
-      links: {
-        demo: "https://demo.variantbeta.ai/signin",
-        github: "https://github.com/andrew/ai-game-generator"
-      },
-      status: "In Development",
-      color: "accent-purple"
-    },
   ]
 
   return (
