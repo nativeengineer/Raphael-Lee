@@ -59,7 +59,7 @@ const Contact = () => {
         },
         'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
       )
-      
+
       setSubmitStatus('success')
       setFormData({ name: '', email: '', message: '' })
     } catch (error) {
@@ -68,7 +68,7 @@ const Contact = () => {
     }
 
     setIsSubmitting(false)
-    
+
     // Reset status after 5 seconds
     setTimeout(() => {
       setSubmitStatus(null)
@@ -91,7 +91,7 @@ const Contact = () => {
     {
       icon: <HiLocationMarker className="text-accent-green" size={24} />,
       label: "Location",
-      value: "Brownwood, TX",
+      value: "Austin, TX",
       link: null
     }
   ]
@@ -125,7 +125,7 @@ const Contact = () => {
       className="min-h-screen relative z-10 py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -137,14 +137,14 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          
+
           {/* Contact Form */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-white">
                 Send me a message
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -244,10 +244,10 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6 text-white">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     variants={itemVariants}
                     className="flex items-center gap-4 p-4 bg-dark-surface border border-gray-700 rounded-lg hover:border-accent-purple/50 transition-colors"
@@ -280,7 +280,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6 text-white">
                 Follow Me
               </h3>
-              
+
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -299,13 +299,13 @@ const Contact = () => {
             </div>
 
             {/* Quote */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="p-6 bg-gradient-to-r from-accent-purple/10 via-accent-blue/10 to-accent-green/10 rounded-xl border border-gray-700"
             >
               <p className="text-gray-300 italic text-lg mb-4">
-                "I'm always excited to discuss new opportunities and innovative projects. 
-                Whether you have a clear vision or just an idea, let's explore how we can 
+                "I'm always excited to discuss new opportunities and innovative projects.
+                Whether you have a clear vision or just an idea, let's explore how we can
                 bring it to life together."
               </p>
               <div className="text-accent-purple font-semibold">

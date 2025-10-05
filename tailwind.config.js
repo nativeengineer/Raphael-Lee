@@ -19,6 +19,7 @@ export default {
           blue: '#3b82f6',    // neon blue  
           green: '#10b981',   // neon green
           pink: '#ec4899',    // neon pink
+          orange: '#f97316',  // neon orange
         }
       },
       fontFamily: {

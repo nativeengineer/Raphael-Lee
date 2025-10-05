@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { 
+import {
   SiReact, SiFlutter, SiUnity, SiTypescript, SiJavascript, SiPython,
   SiNodedotjs, SiMongodb, SiFirebase, SiTensorflow, SiAmazonaws,
-  SiGit, SiDocker, SiFigma
+  SiGit, SiDocker, SiFigma, SiNextdotjs
 } from 'react-icons/si'
-import { 
+import {
   HiDeviceMobile, HiGlobeAlt, HiCode, HiChip
 } from 'react-icons/hi'
 import { FaGamepad } from 'react-icons/fa'
@@ -51,6 +51,17 @@ const Skills = () => {
   }
 
   const skillCategories = [
+    {
+      title: "Frontend Development",
+      icon: <HiCode className="text-accent-orange" size={32} />,
+      color: "accent-orange",
+      skills: [
+        { name: "JavaScript", icon: <SiJavascript size={24} />, level: 95 },
+        { name: "TypeScript", icon: <SiTypescript size={24} />, level: 92 },
+        { name: "React", icon: <SiReact size={24} />, level: 95 },
+        { name: "Next.js", icon: <SiNextdotjs size={24} />, level: 90 }
+      ]
+    },
     {
       title: "Mobile Development",
       icon: <HiDeviceMobile className="text-accent-purple" size={32} />,
@@ -112,7 +123,7 @@ const Skills = () => {
       className="min-h-screen relative z-10 py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -138,7 +149,7 @@ const Skills = () => {
                   {category.title}
                 </h3>
               </div>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="space-y-2">
@@ -155,15 +166,15 @@ const Skills = () => {
                         {skill.level}%
                       </span>
                     </div>
-                    
+
                     {/* Progress bar */}
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${skill.level}%` }}
-                        transition={{ 
-                          duration: 1.5, 
-                          delay: categoryIndex * 0.3 + skillIndex * 0.1 
+                        transition={{
+                          duration: 1.5,
+                          delay: categoryIndex * 0.3 + skillIndex * 0.1
                         }}
                         className={`h-2 rounded-full bg-gradient-to-r from-${category.color} to-${category.color}/70`}
                       />
@@ -180,13 +191,13 @@ const Skills = () => {
           <h3 className="text-2xl font-bold mb-8 text-white">
             Tools & <span className="gradient-text">Technologies</span>
           </h3>
-          
+
           <div className="flex flex-wrap justify-center gap-6">
             {tools.map((tool, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.1,
                   rotate: 5,
                   transition: { duration: 0.2 }
@@ -205,13 +216,13 @@ const Skills = () => {
         </motion.div>
 
         {/* Experience Summary */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="mt-16 text-center p-8 bg-gradient-to-r from-accent-purple/10 via-accent-blue/10 to-accent-green/10 rounded-2xl border border-gray-700"
         >
           <p className="text-lg text-gray-300 mb-4">
-            "I believe in continuous learning and staying up-to-date with the latest technologies. 
-            My diverse skill set allows me to tackle complex problems from multiple angles and 
+            "I believe in continuous learning and staying up-to-date with the latest technologies.
+            My diverse skill set allows me to tackle complex problems from multiple angles and
             deliver comprehensive solutions."
           </p>
           <div className="text-accent-purple font-semibold">
