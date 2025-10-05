@@ -139,7 +139,7 @@ const Projects = () => {
       ],
       links: {
         demo: "https://gianlucajahn.github.io/react-ecommerce-store/",
-        github: "https://github.com/gianlucajahn/react-ecommerce-store?tab=readme-ov-file"
+        github: ""
       },
       status: "Live",
       color: "accent-green"

@@ -35,15 +35,14 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-dark-bg/95 backdrop-blur-md border-b border-gray-800' : 'bg-transparent'
-      }`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-dark-bg/95 backdrop-blur-md border-b border-gray-800' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold gradient-text">
-            AM.
+            RL
           </Link>
 
           {/* Desktop Navigation */}
@@ -83,11 +82,10 @@ const Navbar = () => {
                   <Link
                     key={path}
                     to={path}
-                    className={`block py-2 px-4 rounded-lg transition-colors ${
-                      location.pathname === path
-                        ? 'bg-accent-purple text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
-                    }`}
+                    className={`block py-2 px-4 rounded-lg transition-colors ${location.pathname === path
+                      ? 'bg-accent-purple text-white'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                      }`}
                   >
                     {label}
                   </Link>
