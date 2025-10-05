@@ -51,7 +51,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "AI Game Generator",
+      title: "TryVariant",
       category: "AI/ML • Game Development",
       description: "An intelligent game creation platform that uses AI to generate game mechanics, art assets, and storylines.",
       fullDescription: "A revolutionary platform that democratizes game development by leveraging artificial intelligence. Users can describe their game ideas in natural language, and the AI generates complete game prototypes including mechanics, visual assets, and narrative elements. Built with a microservices architecture for scalability and real-time collaboration features.",
@@ -74,7 +74,7 @@ const Projects = () => {
       ],
       links: {
         demo: "https://demo.variantbeta.ai/signin",
-        github: "https://github.com/andrew/ai-game-generator"
+        github: "https://github.com/nativeengineer/AI-Game-Generator"
       },
       status: "In Development",
       color: "accent-purple"
@@ -183,7 +183,7 @@ const Projects = () => {
       className="min-h-screen relative z-10 py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -237,7 +237,7 @@ const Projects = () => {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                    <div 
+                    <div
                       key={techIndex}
                       className="flex items-center gap-1 px-3 py-1 bg-dark-card rounded-full text-xs"
                     >
@@ -268,7 +268,7 @@ const Projects = () => {
         </div>
 
         {/* GitHub Stats Widget */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="mt-16 text-center"
         >
@@ -343,7 +343,7 @@ const Projects = () => {
                     <h4 className="text-lg font-semibold mb-4 text-white">Technologies Used</h4>
                     <div className="flex flex-wrap gap-3">
                       {selectedProject.technologies.map((tech, index) => (
-                        <div 
+                        <div
                           key={index}
                           className="flex items-center gap-2 px-4 py-2 bg-dark-card border border-gray-700 rounded-lg"
                         >
