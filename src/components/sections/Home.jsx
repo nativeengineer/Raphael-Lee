@@ -35,35 +35,35 @@ const Home = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             <motion.div variants={itemVariants} className="mb-6">
               <span className="text-accent-purple font-medium text-lg">Hello, I'm</span>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               variants={itemVariants}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             >
-              <span className="block">Andrew M.</span>
+              <span className="block">Raphael Lee</span>
               <span className="block gradient-text text-3xl md:text-4xl lg:text-5xl mt-2">
                 Senior Mobile Engineer
               </span>
               <span className="block gradient-text text-3xl md:text-4xl lg:text-5xl">
-                & Game Developer
+                & Frontend Developer
               </span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-xl text-gray-300 mb-8 max-w-2xl"
             >
-              Crafting innovative mobile experiences with React Native, Flutter, WebGL, and AI/ML. 
+              Crafting innovative mobile experiences with React Native, Flutter, WebGL, and AI/ML.
               Building the future of interactive entertainment and user-centric applications.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
@@ -76,12 +76,12 @@ const Home = () => {
             </motion.div>
 
             {/* Tech highlights */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="mt-12 flex flex-wrap gap-3 justify-center lg:justify-start"
             >
-              {['React Native', 'Flutter', 'WebGL', 'AI/ML', 'Game Dev'].map((tech, index) => (
-                <span 
+              {['React Native', 'Flutter', 'JavaScript', 'TypeScript', 'Next.js'].map((tech, index) => (
+                <span
                   key={index}
                   className="px-4 py-2 bg-dark-surface border border-gray-700 rounded-full text-sm text-gray-300 hover:border-accent-purple/50 transition-colors"
                 >
@@ -92,7 +92,7 @@ const Home = () => {
           </div>
 
           {/* Right side - Animated illustration */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="flex justify-center lg:justify-end"
           >
@@ -101,7 +101,7 @@ const Home = () => {
         </div>
 
         {/* Scroll indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
