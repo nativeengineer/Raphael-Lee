@@ -1,4 +1,4 @@
-# Andrew M. - Portfolio Website
+# Raphael Lee - Portfolio Website
 
 A modern, responsive portfolio website built with React, Vite, and TailwindCSS. Features a dark theme with flat UI design, smooth animations, and mobile-first responsive design.
 
