@@ -4,9 +4,11 @@ import { HiExternalLink, HiCode, HiX } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
 import { SiReact, SiFlutter, SiUnity, SiTensorflow, SiFirebase } from 'react-icons/si'
 import ProjectImageCarousel from '../ui/ProjectImageCarousel'
+import { useChatbot } from '../../contexts/ChatbotContext'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
+  const { handleClick } = useChatbot()
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -131,8 +133,6 @@ const Projects = () => {
         "Dedicated game pages",
         "Search functionality",
         "Genre & rating filters",
-        "Like feature",
-        "Wishlist",
         "Responsive design",
         "Testing using Jest",
         "Performance improvements"
@@ -189,7 +189,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-medium">
             A showcase of innovative solutions and creative problem-solving
           </p>
         </motion.div>
@@ -201,7 +201,10 @@ const Projects = () => {
               key={project.id}
               variants={cardVariants}
               whileHover="hover"
-              onClick={() => setSelectedProject(project)}
+              onClick={() => {
+                setSelectedProject(project)
+                handleClick('projects')
+              }}
               className="card cursor-pointer group hover:border-accent-purple/50"
             >
               {/* Project Image Carousel */}
@@ -223,13 +226,13 @@ const Projects = () => {
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent-purple transition-colors">
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-accent-purple transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-sm text-accent-purple font-medium mb-2">
                     {project.category}
                   </p>
-                  <p className="text-gray-300 text-sm line-clamp-3">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 font-medium">
                     {project.description}
                   </p>
                 </div>
@@ -239,18 +242,18 @@ const Projects = () => {
                   {project.technologies.slice(0, 3).map((tech, techIndex) => (
                     <div
                       key={techIndex}
-                      className="flex items-center gap-1 px-3 py-1 bg-dark-card rounded-full text-xs"
+                      className="flex items-center gap-1 px-3 py-1 bg-gray-100 dark:bg-dark-card rounded-full text-xs"
                     >
                       <span className={tech.color}>
                         {tech.icon}
                       </span>
-                      <span className="text-gray-300">
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">
                         {tech.name}
                       </span>
                     </div>
                   ))}
                   {project.technologies.length > 3 && (
-                    <div className="px-3 py-1 bg-dark-card rounded-full text-xs text-gray-400">
+                    <div className="px-3 py-1 bg-gray-100 dark:bg-dark-card rounded-full text-xs text-gray-600 dark:text-gray-400 font-medium">
                       +{project.technologies.length - 3}
                     </div>
                   )}
@@ -258,7 +261,7 @@ const Projects = () => {
 
                 {/* Action buttons */}
                 <div className="flex gap-2 pt-2">
-                  <button className="text-sm text-accent-purple hover:text-white transition-colors">
+                  <button className="text-sm text-accent-purple hover:text-gray-800 dark:hover:text-white transition-colors font-medium">
                     View Details →
                   </button>
                 </div>
@@ -274,15 +277,15 @@ const Projects = () => {
         >
           <div className="card max-w-md mx-auto">
             <FaGithub className="text-4xl text-accent-purple mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-4">GitHub Activity</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">GitHub Activity</h3>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <div className="text-2xl font-bold text-accent-purple">10+</div>
-                <div className="text-sm text-gray-400">Repositories</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Repositories</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-accent-blue">0.2k+</div>
-                <div className="text-sm text-gray-400">Contributions</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Contributions</div>
               </div>
             </div>
           </div>

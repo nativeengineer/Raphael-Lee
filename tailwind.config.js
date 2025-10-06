@@ -4,9 +4,18 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        // Light theme colors - Enhanced for better visibility
+        light: {
+          bg: '#fafbfc',
+          surface: '#ffffff',
+          card: '#ffffff',
+          subtle: '#f1f5f9',
+          accent: '#f8fafc',
+        },
         // Dark theme colors
         dark: {
           bg: '#0d0d0d',

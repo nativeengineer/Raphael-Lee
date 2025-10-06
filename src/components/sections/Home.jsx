@@ -47,20 +47,17 @@ const Home = () => {
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             >
               <span className="block">Raphael Lee</span>
-              <span className="block gradient-text text-3xl md:text-4xl lg:text-5xl mt-2">
-                Senior Mobile Engineer
-              </span>
-              <span className="block gradient-text text-3xl md:text-4xl lg:text-5xl">
-                & Frontend Developer
+              <span className="block gradient-text text-xl md:text-2xl lg:text-3xl mt-2">
+                Senior Mobile & Web Engineer
               </span>
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
-              className="text-xl text-gray-300 mb-8 max-w-2xl"
+              className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl font-medium"
             >
-              Crafting innovative mobile experiences with React Native, Flutter, WebGL, and AI/ML.
-              Building the future of interactive entertainment and user-centric applications.
+              Building scalable mobile apps with React Native & Flutter, and modern web applications with Next.js & React.
+              Specializing in cross-platform development, AI integration, LLM automation, and intelligent user experiences.
             </motion.p>
 
             <motion.div
@@ -80,10 +77,10 @@ const Home = () => {
               variants={itemVariants}
               className="mt-12 flex flex-wrap gap-3 justify-center lg:justify-start"
             >
-              {['React Native', 'Flutter', 'JavaScript', 'TypeScript', 'Next.js'].map((tech, index) => (
+              {['React Native', 'Flutter', 'Next.js', 'AI/ML', 'LLM'].map((tech, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 bg-dark-surface border border-gray-700 rounded-full text-sm text-gray-300 hover:border-accent-purple/50 transition-colors"
+                  className="px-4 py-2 bg-white dark:bg-dark-surface border border-gray-200 dark:border-gray-700 rounded-full text-sm text-gray-700 dark:text-gray-300 hover:border-accent-purple/50 transition-colors shadow-sm dark:shadow-none hover:shadow-md"
                 >
                   {tech}
                 </span>
@@ -110,7 +107,7 @@ const Home = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="text-gray-400 hover:text-accent-purple cursor-pointer transition-colors"
+            className="text-gray-600 dark:text-gray-400 hover:text-accent-purple cursor-pointer transition-colors"
           >
             <HiArrowDown size={24} />
           </motion.div>
