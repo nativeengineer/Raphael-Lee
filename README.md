@@ -182,7 +182,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙋‍♂️ Support
 
 If you have any questions or need help customizing the portfolio, feel free to reach out!
-
----
-
-Built with ❤️ by Andrew M.
