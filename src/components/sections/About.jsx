@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { HiDownload, HiCode, HiDeviceMobile, HiGlobeAlt } from 'react-icons/hi'
 import { FaGamepad } from 'react-icons/fa'
 import { useChatbot } from '../../contexts/ChatbotContext'
+import Timeline from '../ui/Timeline'
 
 const About = () => {
   const { handleClick } = useChatbot()
@@ -31,8 +32,8 @@ const About = () => {
   const handleResumeDownload = () => {
     // Create a placeholder resume - in production, you'd have an actual PDF
     const link = document.createElement('a')
-    link.href = '/andrew mccloskey resume.pdf' // You'll need to add this to the public folder
-    link.download = 'Andrew-McCloskey-Resume.pdf'
+    link.href = '/Raphael Lee.pdf' // You'll need to add this to the public folder
+    link.download = 'Raphael-Lee-Resume.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -41,23 +42,84 @@ const About = () => {
   const highlights = [
     {
       icon: <HiDeviceMobile className="text-accent-purple" size={24} />,
-      title: "Cross-Platform Mobile",
-      description: "6+ years building native-feeling apps with React Native and Flutter"
+      title: "AI Game Development",
+      description: "Building AI Game Generator with Flutter, enabling users to create games from text prompts"
     },
     {
       icon: <HiGlobeAlt className="text-accent-blue" size={24} />,
-      title: "Modern Web Development",
-      description: "Creating responsive, performant web apps with Next.js, React, and TypeScript"
+      title: "AR/VR Integration",
+      description: "Implementing Augmented Reality features for property identification and real-time data"
     },
     {
       icon: <HiCode className="text-accent-green" size={24} />,
-      title: "AI Integration",
-      description: "Expert in LLM integration, prompt engineering, and AI automation for intelligent apps"
+      title: "Real-time Systems",
+      description: "Expert in WebSockets, AWS, and scalable APIs for live data synchronization"
     },
     {
       icon: <FaGamepad className="text-accent-pink" size={24} />,
-      title: "Full Stack Solutions",
-      description: "End-to-end development from mobile apps to web platforms and APIs"
+      title: "Cross-Platform Apps",
+      description: "8+ years building high-performance apps with React Native, Flutter, and modern web frameworks"
+    }
+  ]
+
+  const experiences = [
+    {
+      type: 'work',
+      title: 'Senior Mobile Engineer',
+      company: 'Variant Labs',
+      duration: 'Aug 2023 - Present',
+      description: 'Developing AI Game Generator mobile app in Flutter, enabling users to create games from text prompts with dynamically generated levels, mechanics, and assets.',
+      technologies: ['Flutter', 'AI/ML', 'Cloud Storage', 'Riverpod', 'Figma', 'iOS', 'Android'],
+      achievements: [
+        'Developed AI Game Generator with face upload & personalization features',
+        'Implemented social networking functionality for game sharing and collaboration',
+        'Applied advanced Flutter performance optimization ensuring smooth 60fps gameplay',
+        'Architected scalable cloud storage and media pipelines for game uploads',
+        'Integrated real-time notifications and activity feeds for group interactions'
+      ]
+    },
+    {
+      type: 'work',
+      title: 'Mobile Engineer',
+      company: 'TopHap',
+      duration: 'Jan 2021 - Jul 2023',
+      description: 'Developed TopHap Explorer mobile application from scratch, providing real-time property data and neighborhood insights using React Native with AR integration.',
+      technologies: ['React Native', 'AR/VR', 'WebSockets', 'AWS', 'Redux', 'React Query', 'Google Maps API'],
+      achievements: [
+        'Built TopHap Explorer app with AR property identification using ARKit/ARCore',
+        'Implemented GPS-based property search with real-time location data',
+        'Developed real-time data synchronization using WebSockets and AWS',
+        'Built Comparative Market Analysis (CMA) feature with React Query caching',
+        'Integrated neighborhood analysis with walkability scores and crime rates'
+      ]
+    },
+    {
+      type: 'work',
+      title: 'Junior Web Developer',
+      company: 'True Prodigy Tech Solution',
+      duration: 'Jun 2019 - Dec 2020',
+      description: 'Quickly learned React.js, React Native, and TypeScript while delivering user-friendly interfaces and improving project performance.',
+      technologies: ['React.js', 'React Native', 'TypeScript', 'Redux', 'Redux Saga', 'Jest', 'Cypress'],
+      achievements: [
+        'Migrated React application to TypeScript improving project performance',
+        'Implemented React Hooks to accelerate frontend rebuild while maintaining compatibility',
+        'Designed architecture using Redux and Redux Saga for state management',
+        'Delivered responsive and pixel-perfect user interfaces',
+        'Used various testing frameworks (Jest, Mocha, Cypress) for stable projects'
+      ]
+    },
+    {
+      type: 'education',
+      title: 'Bachelor of Science in Computer Science',
+      company: 'Texas A&M University',
+      duration: '2015 - 2019',
+      description: 'Focused on computer science fundamentals, software engineering, and modern development practices.',
+      technologies: ['Java', 'C++', 'Data Structures', 'Algorithms', 'Software Engineering'],
+      achievements: [
+        'Graduated with Bachelor of Science in Computer Science',
+        'Strong foundation in software engineering principles',
+        'Prepared for modern web and mobile development career'
+      ]
     }
   ]
 
@@ -86,25 +148,24 @@ const About = () => {
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="prose prose-lg text-gray-700 dark:text-gray-300">
               <p className="text-lg leading-relaxed font-medium">
-                I'm a <span className="text-accent-purple font-semibold">Senior Mobile & Web Developer</span> with
-                <span className="text-accent-blue font-semibold"> 6+ years of experience</span> building
-                scalable cross-platform applications with AI integration. I specialize in React Native, Flutter, Next.js,
-                AI/ML technologies, and modern web frameworks, delivering intelligent mobile apps and responsive web applications.
+                I'm a <span className="text-accent-purple font-semibold">Senior Software Engineer</span> with
+                <span className="text-accent-blue font-semibold"> 8+ years of experience</span> building
+                high-performance web and cross-platform apps using React, Next.js, Flutter, and React Native.
+                I specialize in creating seamless user experiences across iOS, Android, and web platforms.
               </p>
 
               <p className="text-lg leading-relaxed font-medium">
-                My expertise spans the full mobile and web development stack, from native iOS/Android
-                development to modern web frameworks and AI integration. I excel at building cross-platform solutions using
-                React Native and Flutter, while also creating performant web applications with Next.js,
-                React, and TypeScript. I specialize in integrating AI/ML capabilities, LLM APIs, and automation
-                to create intelligent applications with exceptional user experiences.
+                My expertise spans AI-driven development, AR/VR integration, and real-time data systems using
+                WebSockets, AWS, and scalable APIs. I'm passionate about designing modern, responsive interfaces,
+                optimizing performance, and building products that combine AI, social features, and geospatial data
+                to deliver engaging and intelligent digital experiences.
               </p>
 
               <p className="text-lg leading-relaxed font-medium">
-                I'm passionate about staying current with the latest mobile, web, and AI technologies,
-                contributing to open-source projects, and mentoring junior developers. I believe in
-                continuous learning and enjoy tackling complex challenges that push the boundaries of
-                what's possible in mobile, web, and AI development.
+                I excel at translating Figma prototypes into reusable Flutter widgets with responsive layouts,
+                implementing advanced performance optimizations, and architecting scalable cloud storage solutions.
+                I believe in continuous learning and enjoy tackling complex challenges that push the boundaries
+                of what's possible in mobile, web, and AI development.
               </p>
             </div>
 
@@ -153,15 +214,29 @@ const About = () => {
           </motion.div>
         </div>
 
+        {/* Experience Timeline Section */}
+        <motion.div variants={itemVariants} className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              My <span className="gradient-text">Journey</span>
+            </h3>
+            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+              A timeline of my professional experience and achievements
+            </p>
+          </div>
+
+          <Timeline experiences={experiences} />
+        </motion.div>
+
         {/* Stats Section */}
         <motion.div
           variants={itemVariants}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { number: "6+", label: "Years Experience" },
-            { number: "40+", label: "Mobile Apps Built" },
-            { number: "25+", label: "Web Projects" },
+            { number: "8+", label: "Years Experience" },
+            { number: "15+", label: "Mobile Apps Built" },
+            { number: "20+", label: "Web Projects" },
             { number: "100%", label: "Client Satisfaction" }
           ].map((stat, index) => (
             <div key={index} className="text-center">

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiMail, HiPhone, HiLocationMarker, HiPaperAirplane } from 'react-icons/hi'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaPhone, FaTwitter } from 'react-icons/fa'
 import { useTheme } from '../../contexts/ThemeContext'
 import emailjs from 'emailjs-com'
 
@@ -81,14 +81,14 @@ const Contact = () => {
     {
       icon: <HiMail className="text-accent-purple" size={24} />,
       label: "Email",
-      value: "andrew.mark0613@gmail.com",
-      link: "andrew.mark0613@gmail.com"
+      value: "raphaeljeonghuanlee45@gmail.com",
+      link: null
     },
     {
       icon: <HiPhone className="text-accent-blue" size={24} />,
       label: "Phone",
       value: "+1 (254) 273-9994",
-      link: "tel:+12542739994"
+      link: null
     },
     {
       icon: <HiLocationMarker className="text-accent-green" size={24} />,
@@ -102,19 +102,19 @@ const Contact = () => {
     {
       name: "GitHub",
       icon: <FaGithub size={24} />,
-      url: "https://github.com/andrew-m",
+      url: "https://github.com/nativeengineer/",
       color: "hover:text-gray-400"
     },
     {
       name: "LinkedIn",
       icon: <FaLinkedin size={24} />,
-      url: "https://linkedin.com/in/andrew-m",
+      url: "https://linkedin.com/in/raphael-jeonghuan-lee/",
       color: "hover:text-blue-400"
     },
     {
-      name: "Twitter",
-      icon: <FaTwitter size={24} />,
-      url: "https://twitter.com/andrew_m_dev",
+      name: "Phone",
+      icon: <FaPhone size={24} />,
+      url: "tel:+12542739994",
       color: "hover:text-blue-400"
     }
   ]
@@ -320,7 +320,7 @@ const Contact = () => {
                 )}
               </p>
               <div className="text-accent-purple font-semibold">
-                - Andrew M.
+                - Raphael L.
               </div>
             </motion.div>
           </motion.div>

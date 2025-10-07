@@ -16,19 +16,19 @@ export default {
           subtle: '#f1f5f9',
           accent: '#f8fafc',
         },
-        // Dark theme colors
+        // Dark theme colors - Modern & Fashionable
         dark: {
-          bg: '#0d0d0d',
-          surface: '#1a1a1a',
-          card: '#262626',
+          bg: '#0f0f23',        // Deep navy blue
+          surface: '#1a1a2e',   // Rich dark blue
+          card: '#16213e',      // Sophisticated blue-gray
         },
-        // Accent colors - customize these for your brand
+        // Accent colors - Modern & Fashionable
         accent: {
-          purple: '#8b5cf6',  // neon purple
-          blue: '#3b82f6',    // neon blue  
-          green: '#10b981',   // neon green
-          pink: '#ec4899',    // neon pink
-          orange: '#f97316',  // neon orange
+          purple: '#a855f7',  // Vibrant purple
+          blue: '#06b6d4',    // Cyan blue  
+          green: '#22c55e',   // Emerald green
+          pink: '#f472b6',    // Hot pink
+          orange: '#f59e0b',  // Amber orange
         }
       },
       fontFamily: {

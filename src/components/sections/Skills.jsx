@@ -153,7 +153,13 @@ const Skills = () => {
                 key={categoryIndex}
                 variants={cardVariants}
                 whileHover="hover"
-                className="card group hover:border-accent-purple/50 cursor-pointer"
+                className={`card group cursor-pointer border-l-4 ${category.color === 'accent-purple' ? 'border-l-accent-purple hover:border-l-accent-purple/80 hover:bg-accent-purple/5' :
+                  category.color === 'accent-orange' ? 'border-l-accent-orange hover:border-l-accent-orange/80 hover:bg-accent-orange/5' :
+                    category.color === 'accent-blue' ? 'border-l-accent-blue hover:border-l-accent-blue/80 hover:bg-accent-blue/5' :
+                      category.color === 'accent-green' ? 'border-l-accent-green hover:border-l-accent-green/80 hover:bg-accent-green/5' :
+                        category.color === 'accent-pink' ? 'border-l-accent-pink hover:border-l-accent-pink/80 hover:bg-accent-pink/5' :
+                          'border-l-accent-purple hover:border-l-accent-purple/80 hover:bg-accent-purple/5'
+                  } transition-all duration-300`}
                 onClick={() => handleClick(categoryType)}
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -168,7 +174,13 @@ const Skills = () => {
                     <div key={skillIndex} className="space-y-2">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <span className="text-gray-400">
+                          <span className={`${category.color === 'accent-purple' ? 'text-accent-purple' :
+                            category.color === 'accent-orange' ? 'text-accent-orange' :
+                              category.color === 'accent-blue' ? 'text-accent-blue' :
+                                category.color === 'accent-green' ? 'text-accent-green' :
+                                  category.color === 'accent-pink' ? 'text-accent-pink' :
+                                    'text-accent-purple'
+                            } transition-colors duration-300`}>
                             {skill.icon}
                           </span>
                           <span className="text-gray-800 dark:text-white font-semibold">
@@ -189,7 +201,13 @@ const Skills = () => {
                             duration: 1.5,
                             delay: categoryIndex * 0.3 + skillIndex * 0.1
                           }}
-                          className={`h-2 rounded-full bg-gradient-to-r from-${category.color} to-${category.color}/70`}
+                          className={`h-2 rounded-full ${category.color === 'accent-purple' ? 'bg-gradient-to-r from-accent-purple to-accent-purple/70' :
+                            category.color === 'accent-orange' ? 'bg-gradient-to-r from-accent-orange to-accent-orange/70' :
+                              category.color === 'accent-blue' ? 'bg-gradient-to-r from-accent-blue to-accent-blue/70' :
+                                category.color === 'accent-green' ? 'bg-gradient-to-r from-accent-green to-accent-green/70' :
+                                  category.color === 'accent-pink' ? 'bg-gradient-to-r from-accent-pink to-accent-pink/70' :
+                                    'bg-gradient-to-r from-accent-purple to-accent-purple/70'
+                            }`}
                         />
                       </div>
                     </div>
@@ -240,7 +258,7 @@ const Skills = () => {
             intelligent cross-platform solutions that perform beautifully on any device."
           </p>
           <div className="text-accent-purple font-semibold">
-            - Andrew M.
+            - Raphael Lee
           </div>
         </motion.div>
       </div>

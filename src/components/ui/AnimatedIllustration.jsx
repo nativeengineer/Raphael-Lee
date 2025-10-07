@@ -70,7 +70,7 @@ const AnimatedIllustration = () => {
 
         {/* Avatar image */}
         <motion.img
-          src="/andrew-avatar.jpg"
+          src="/raphael-lee.jpg"
           alt="Andrew M. - Developer Avatar"
           className="relative z-10 w-full h-full object-cover rounded-full aspect-square"
           style={{

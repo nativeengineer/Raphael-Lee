@@ -16,11 +16,11 @@
     @apply bg-light-bg dark:bg-dark-bg text-gray-800 dark:text-white font-sans antialiased;
     @apply selection:bg-accent-purple/20 selection:text-accent-purple;
     background-image:
-      radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 60%),
-      radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
-      radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 60%),
-      radial-gradient(circle at 60% 10%, rgba(236, 72, 153, 0.04) 0%, transparent 50%),
-      radial-gradient(circle at 10% 60%, rgba(249, 115, 22, 0.03) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 60%),
+      radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 60%),
+      radial-gradient(circle at 40% 40%, rgba(34, 197, 94, 0.05) 0%, transparent 60%),
+      radial-gradient(circle at 60% 10%, rgba(244, 114, 182, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 10% 60%, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
     background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
     animation: gradientShift 20s ease-in-out infinite;
   }
@@ -90,9 +90,9 @@
     width: 200%;
     height: 200%;
     background:
-      radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, rgba(34, 197, 94, 0.08) 0%, transparent 50%);
     animation: float 20s ease-in-out infinite;
     pointer-events: none;
   }
@@ -117,7 +117,7 @@
 /* Animations */
 @layer utilities {
   .animate-gradient {
-    background: linear-gradient(-45deg, #8b5cf6, #3b82f6, #10b981, #ec4899);
+    background: linear-gradient(-45deg, #a855f7, #06b6d4, #22c55e, #f472b6);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
@@ -166,11 +166,11 @@
 
     0%,
     100% {
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
     }
 
     50% {
-      box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
     }
   }
 
@@ -281,7 +281,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -289,7 +289,7 @@
     color: white;
     font-size: 18px;
     animation: floatIcon 15s ease-in-out infinite;
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
   }
 
   .mobile-icon-1 {
@@ -326,7 +326,7 @@
   .mobile-line {
     position: absolute;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.6), transparent);
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.6), transparent);
     animation: lineGlow 8s ease-in-out infinite;
   }
 
@@ -356,7 +356,7 @@
     position: absolute;
     width: 8px;
     height: 8px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.8), transparent);
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.8), transparent);
     border-radius: 50%;
     animation: dotPulse 6s ease-in-out infinite;
   }
@@ -399,16 +399,16 @@
   }
 
   .dark .mobile-icon {
-    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
-    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+    background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
   }
 
   .dark .mobile-line {
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.6), transparent);
+    background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), transparent);
   }
 
   .dark .mobile-dot {
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent);
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.8), transparent);
   }
 
   /* Animations */
